@@ -12,8 +12,9 @@ public class RegistrationController {
 
    @PostMapping("/user/register")
     public ResponseDto<UserResponseDto> registerUser(@RequestBody UserDto userDto){
+
         return new ResponseDto<>(
-                new UserResponseDto(1L, userDto.getFullName() ,userDto.getEmail(), true),
+                new UserResponseDto(1L, userDto.getFullName(), userDto.getEmail(), true ),
                 HttpStatus.OK
         );
     }
