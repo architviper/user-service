@@ -2,6 +2,7 @@ package dev.user.register.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.stereotype.Service;
 
 import javax.persistence.*;
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
 @Table(name ="users")
 @Getter
 @Setter
+@Service
 public class User {
 
     @Id
