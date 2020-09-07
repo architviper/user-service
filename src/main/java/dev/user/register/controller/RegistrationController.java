@@ -10,10 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class RegistrationController {
 
-    @RequestMapping(
-            value = "/user/register",
-            method = RequestMethod.POST
-    )
+   @PostMapping("/user/register")
     public ResponseDto<UserResponseDto> registerUser(@RequestBody UserDto userDto){
         return new ResponseDto<>(
                 new UserResponseDto(1L, userDto.getFullName() ,userDto.getEmail(), true),
